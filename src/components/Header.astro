@@ -1,0 +1,153 @@
+<header class="sticky top-0 z-50 bg-white shadow-sm">
+  <nav class="container mx-auto px-6 py-4">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center">
+        <a href="/" class="text-2xl font-bold text-blue-900">AutoSeguro</a>
+      </div>
+
+      <div class="hidden md:flex items-center space-x-8">
+        <a
+          href="/#inicio"
+          class="text-black hover:text-blue-900 transition-colors duration-300"
+          data-translate="nav_inicio"
+          >Inicio</a
+        >
+        <a
+          href="/#servicios"
+          class="text-black hover:text-blue-900 transition-colors duration-300"
+          data-translate="nav_servicios"
+          >Servicios</a
+        >
+        <a
+          href="/#cotizar"
+          class="text-black hover:text-blue-900 transition-colors duration-300"
+          data-translate="nav_cotizar"
+          >Cotizar</a
+        >
+        <a
+          href="/#nosotros"
+          class="text-black hover:text-blue-900 transition-colors duration-300"
+          data-translate="nav_nosotros"
+          >Nosotros</a
+        >
+        <a
+          href="/#contacto"
+          class="text-black hover:text-blue-900 transition-colors duration-300"
+          data-translate="nav_contacto"
+          >Contacto</a
+        >
+      </div>
+
+      <div class="flex items-center space-x-4">
+        <button
+          id="lang-toggle"
+          class="px-4 py-2 bg-blue-900 text-white rounded-md hover:bg-blue-800 transition-colors duration-300"
+        >
+          ES </button>
+        <button id="mobile-menu-toggle" class="md:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+      <a
+        href="/#inicio"
+        class="block py-2 text-black hover:text-blue-900 transition-colors duration-300"
+        data-translate="nav_inicio"
+        >Inicio</a
+      >
+      <a
+        href="/#servicios"
+        class="block py-2 text-black hover:text-blue-900 transition-colors duration-300"
+        data-translate="nav_servicios"
+        >Servicios</a
+      >
+      <a
+        href="/#cotizar"
+        class="block py-2 text-black hover:text-blue-900 transition-colors duration-300"
+        data-translate="nav_cotizar"
+        >Cotizar</a
+      >
+      <a
+        href="/#nosotros"
+        class="block py-2 text-black hover:text-blue-900 transition-colors duration-300"
+        data-translate="nav_nosotros"
+        >Nosotros</a
+      >
+      <a
+        href="/#contacto"
+        class="block py-2 text-black hover:text-blue-900 transition-colors duration-300"
+        data-translate="nav_contacto"
+        >Contacto</a
+      >
+    </div>
+  </nav>
+</header>
+
+<script>
+  // Script para manejar el menú móvil y la persistencia del idioma
+  document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const langToggle = document.getElementById('lang-toggle');
+
+    // 1. Lógica de persistencia de idioma
+    if (langToggle) {
+      const LANG_KEY = 'userLanguagePreference';
+      const defaultLang = 'ES'; // Idioma por defecto si no hay nada guardado
+
+      // Función para aplicar el idioma (actualiza la interfaz)
+      const applyLanguage = (lang) => {
+        langToggle.textContent = lang;
+      };
+
+      // Cargar idioma al iniciar:
+      const savedLang = localStorage.getItem(LANG_KEY);
+      // Si hay un idioma guardado, aplícalo, si no, usa el predeterminado
+      applyLanguage(savedLang || defaultLang);
+
+      // Listener para el cambio de idioma
+      langToggle.addEventListener('click', () => {
+        const currentLang = langToggle.textContent?.trim();
+        let newLang;
+
+        // Determinar el nuevo idioma y cambiar
+        if (currentLang === 'EN') {
+          newLang = 'ES';
+        } else {
+          newLang = 'EN';
+        }
+
+        // 2. Guardar el nuevo idioma en localStorage
+        localStorage.setItem(LANG_KEY, newLang);
+
+        // 3. Actualizar la interfaz (botón)
+        applyLanguage(currentLang);
+        
+        // Opcional: Recargar la página para que Astro/el backend cargue el contenido traducido
+        // window.location.reload(); 
+      });
+    }
+
+    // Lógica del menú móvil
+    if (mobileMenuToggle && mobileMenu) {
+      mobileMenuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  });
+</script>

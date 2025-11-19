@@ -1,0 +1,490 @@
+---
+// src/pages/cookies.astro
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Política de Cookies | AutoSeguro">
+  <div id="app" class="min-h-screen bg-white">
+    <!-- Barra de navegación -->
+    <Header />
+
+    <!-- Contenido principal -->
+    <main class="container mx-auto px-6 py-12 md:py-20">
+      <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl md:text-4xl font-bold text-blue-900 mb-8" data-translate="cookies_title">Política de Cookies</h1>
+        
+        <div class="prose prose-lg max-w-none">
+          <p class="text-black mb-6" data-translate="cookies_intro">
+            Esta política de cookies explica qué son las cookies, cómo AutoSeguro las utiliza en nuestro sitio web y cómo puedes controlar su uso. Al continuar utilizando nuestro sitio, aceptas el uso de cookies de acuerdo con esta política.
+          </p>
+          
+          <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4" data-translate="cookies_what_title">1. ¿Qué son las Cookies?</h2>
+          <p class="text-black mb-4" data-translate="cookies_what_text">
+            Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo (computadora, tablet o móvil) cuando visitas un sitio web. Permiten que el sitio web reconozca tu dispositivo y recuerde cierta información sobre tu visita.
+          </p>
+          <div class="bg-gray-50 p-6 rounded-lg mb-6">
+            <p class="text-black mb-2" data-translate="cookies_what_example">
+              <strong>Ejemplo:</strong> Cuando inicias sesión en tu cuenta de AutoSeguro, las cookies nos permiten recordarte para que no tengas que iniciar sesión nuevamente en cada visita.
+            </p>
+          </div>
+          
+          <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4" data-translate="cookies_types_title">2. Tipos de Cookies que Utilizamos</h2>
+          
+          <div class="space-y-6 mb-6">
+            <div class="border-l-4 border-orange-500 pl-4">
+              <h3 class="text-xl font-semibold text-blue-900 mb-2" data-translate="cookies_essential_title">Cookies Esenciales</h3>
+              <p class="text-black mb-2" data-translate="cookies_essential_text">
+                Son necesarias para el funcionamiento básico del sitio web. Sin estas cookies, el sitio no puede funcionar correctamente.
+              </p>
+              <ul class="list-disc pl-6 text-black space-y-1">
+                <li data-translate="cookies_essential_item1">Mantener la sesión de usuario activa</li>
+                <li data-translate="cookies_essential_item2">Gestionar el carrito de cotizaciones</li>
+                <li data-translate="cookies_essential_item3">Proteger contra fraudes y seguridad</li>
+              </ul>
+            </div>
+            
+            <div class="border-l-4 border-orange-500 pl-4">
+              <h3 class="text-xl font-semibold text-blue-900 mb-2" data-translate="cookies_performance_title">Cookies de Rendimiento</h3>
+              <p class="text-black mb-2" data-translate="cookies_performance_text">
+                Recopilan información sobre cómo los visitantes utilizan el sitio web para ayudarnos a mejorar su funcionamiento.
+              </p>
+              <ul class="list-disc pl-6 text-black space-y-1">
+                <li data-translate="cookies_performance_item1">Analizar el tráfico del sitio</li>
+                <li data-translate="cookies_performance_item2">Medir el tiempo de carga de páginas</li>
+                <li data-translate="cookies_performance_item3">Identificar páginas populares</li>
+              </ul>
+            </div>
+            
+            <div class="border-l-4 border-orange-500 pl-4">
+              <h3 class="text-xl font-semibold text-blue-900 mb-2" data-translate="cookies_functional_title">Cookies Funcionales</h3>
+              <p class="text-black mb-2" data-translate="cookies_functional_text">
+                Permiten que el sitio web recuerde las elecciones que has hecho para proporcionar funcionalidades mejoradas.
+              </p>
+              <ul class="list-disc pl-6 text-black space-y-1">
+                <li data-translate="cookies_functional_item1">Recordar tus preferencias de idioma</li>
+                <li data-translate="cookies_functional_item2">Guardar información de cotizaciones previas</li>
+                <li data-translate="cookies_functional_item3">Personalizar el contenido mostrado</li>
+              </ul>
+            </div>
+            
+            <div class="border-l-4 border-orange-500 pl-4">
+              <h3 class="text-xl font-semibold text-blue-900 mb-2" data-translate="cookies_marketing_title">Cookies de Marketing</h3>
+              <p class="text-black mb-2" data-translate="cookies_marketing_text">
+                Se utilizan para mostrar anuncios relevantes para ti y tus intereses, tanto en nuestro sitio como en sitios de terceros.
+              </p>
+              <ul class="list-disc pl-6 text-black space-y-1">
+                <li data-translate="cookies_marketing_item1">Personalizar anuncios según tu comportamiento</li>
+                <li data-translate="cookies_marketing_item2">Medir la efectividad de campañas publicitarias</li>
+                <li data-translate="cookies_marketing_item3">Limitar cuántas veces ves un anuncio</li>
+              </ul>
+            </div>
+          </div>
+          
+          <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4" data-translate="cookies_thirdparty_title">3. Cookies de Terceros</h2>
+          <p class="text-black mb-4" data-translate="cookies_thirdparty_text">
+            Utilizamos servicios de terceros que también pueden colocar cookies en tu dispositivo:
+          </p>
+          
+          <div class="overflow-x-auto mb-6">
+            <table class="min-w-full bg-white border border-gray-200">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-blue-900 uppercase tracking-wider" data-translate="cookies_table_service">Servicio</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-blue-900 uppercase tracking-wider" data-translate="cookies_table_purpose">Propósito</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-blue-900 uppercase tracking-wider" data-translate="cookies_table_link">Política</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200">
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-black">Google Analytics</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-black" data-translate="cookies_google_analytics">Análisis de tráfico y comportamiento del usuario</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm">
+                    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="text-blue-900 hover:underline" data-translate="cookies_view_policy">Ver política</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-black">Facebook Pixel</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-black" data-translate="cookies_facebook_pixel">Publicidad personalizada y remarketing</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm">
+                    <a href="https://www.facebook.com/policy.php" target="_blank" rel="noopener" class="text-blue-900 hover:underline" data-translate="cookies_view_policy">Ver política</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-black">Google Ads</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-black" data-translate="cookies_google_ads">Gestión de campañas publicitarias</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm">
+                    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="text-blue-900 hover:underline" data-translate="cookies_view_policy">Ver política</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4" data-translate="cookies_duration_title">4. Duración de las Cookies</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <h3 class="text-lg font-semibold text-blue-900 mb-2" data-translate="cookies_session_title">Cookies de Sesión</h3>
+              <p class="text-black" data-translate="cookies_session_text">
+                Se eliminan automáticamente cuando cierras tu navegador. Se utilizan para mantener tu sesión activa durante tu visita.
+              </p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <h3 class="text-lg font-semibold text-blue-900 mb-2" data-translate="cookies_persistent_title">Cookies Persistentes</h3>
+              <p class="text-black" data-translate="cookies_persistent_text">
+                Permanecen en tu dispositivo por un período específico (generalmente de 30 días a 1 año) para recordar tus preferencias.
+              </p>
+            </div>
+          </div>
+          
+          <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4" data-translate="cookies_control_title">5. Cómo Controlar las Cookies</h2>
+          <p class="text-black mb-4" data-translate="cookies_control_text">
+            Tienes varias opciones para controlar el uso de cookies:
+          </p>
+          
+          <div class="space-y-4 mb-6">
+            <div class="flex items-start">
+              <div class="flex-shrink-0">
+                <div class="flex items-center justify-center h-8 w-8 rounded-full bg-blue-100 text-blue-900 font-bold">1</div>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-lg font-semibold text-black" data-translate="cookies_control_browser_title">Configuración del Navegador</h3>
+                <p class="text-black" data-translate="cookies_control_browser_text">
+                  Puedes configurar tu navegador para que rechace todas las cookies o para que te avise cuando se envía una cookie. Ten en cuenta que deshabilitar cookies puede afectar la funcionalidad del sitio.
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="flex-shrink-0">
+                <div class="flex items-center justify-center h-8 w-8 rounded-full bg-blue-100 text-blue-900 font-bold">2</div>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-lg font-semibold text-black" data-translate="cookies_control_banner_title">Banner de Cookies</h3>
+                <p class="text-black" data-translate="cookies_control_banner_text">
+                  Nuestro sitio muestra un banner donde puedes aceptar o rechazar categorías específicas de cookies según tus preferencias.
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="flex-shrink-0">
+                <div class="flex items-center justify-center h-8 w-8 rounded-full bg-blue-100 text-blue-900 font-bold">3</div>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-lg font-semibold text-black" data-translate="cookies_control_settings_title">Panel de Preferencias</h3>
+                <p class="text-black" data-translate="cookies_control_settings_text">
+                  Puedes acceder a nuestro panel de preferencias de cookies en cualquier momento haciendo clic en el ícono de cookies en la esquina inferior del sitio.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4" data-translate="cookies_browsers_title">6. Guía de Configuración por Navegador</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+            <a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener" class="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-3" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+              <div class="text-left">
+                <p class="font-semibold text-black">Chrome</p>
+                <p class="text-sm text-gray-600" data-translate="cookies_configure">Configurar cookies</p>
+              </div>
+            </a>
+            
+            <a href="https://support.mozilla.org/es/kb/cookies-informacion-que-los-sitios-web-guardan-en" target="_blank" rel="noopener" class="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-3" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+              <div class="text-left">
+                <p class="font-semibold text-black">Firefox</p>
+                <p class="text-sm text-gray-600" data-translate="cookies_configure">Configurar cookies</p>
+              </div>
+            </a>
+            
+            <a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank" rel="noopener" class="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-3" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+              <div class="text-left">
+                <p class="font-semibold text-black">Safari</p>
+                <p class="text-sm text-gray-600" data-translate="cookies_configure">Configurar cookies</p>
+              </div>
+            </a>
+            
+            <a href="https://support.microsoft.com/es-es/microsoft-edge/delete-cookies-in-microsoft-edge" target="_blank" rel="noopener" class="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-3" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+              <div class="text-left">
+                <p class="font-semibold text-black">Edge</p>
+                <p class="text-sm text-gray-600" data-translate="cookies_configure">Configurar cookies</p>
+              </div>
+            </a>
+          </div>
+          
+          <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4" data-translate="cookies_updates_title">7. Actualizaciones de esta Política</h2>
+          <p class="text-black mb-6" data-translate="cookies_updates_text">
+            Podemos actualizar esta política de cookies periódicamente para reflejar cambios en nuestras prácticas o por razones operativas, legales o regulatorias. Te recomendamos revisar esta página regularmente para estar informado sobre nuestro uso de cookies.
+          </p>
+          
+          <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4" data-translate="cookies_contact_title">8. Contacto</h2>
+          <p class="text-black mb-4" data-translate="cookies_contact_text">
+            Si tienes alguna pregunta sobre nuestra política de cookies o su uso en nuestro sitio web, puedes contactarnos:
+          </p>
+          <div class="bg-gray-50 p-6 rounded-lg mb-6">
+            <p class="text-black mb-2"><strong data-translate="cookies_contact_email">Correo electrónico:</strong> privacy@autoseguro.com</p>
+            <p class="text-black mb-2"><strong data-translate="cookies_contact_phone">Teléfono:</strong> +1 (555) 123-4567</p>
+            <p class="text-black"><strong data-translate="cookies_contact_address">Dirección:</strong> 123 Calle Principal, Ciudad, País</p>
+          </div>
+          
+          <div class="bg-blue-50 p-6 rounded-lg mb-6">
+            <h3 class="text-lg font-semibold text-blue-900 mb-2" data-translate="cookies_compliance_title">Cumplimiento Normativo</h3>
+            <p class="text-black mb-2" data-translate="cookies_compliance_gdpr">
+              <strong>RGPD:</strong> Nuestra política cumple con el Reglamento General de Protección de Datos (UE) 2016/679.
+            </p>
+            <p class="text-black" data-translate="cookies_compliance_ccpa">
+              <strong>CCPA:</strong> Cumplimos con la Ley de Privacidad del Consumidor de California.
+            </p>
+          </div>
+          
+          <p class="text-black mt-8 text-sm" data-translate="cookies_last_updated">
+            Última actualización: 15 de noviembre de 2023
+          </p>
+        </div>
+        
+        <div class="mt-12 text-center">
+          <a href="/" class="inline-flex items-center px-6 py-3 bg-orange-500 text-white font-semibold rounded-md hover:bg-orange-600 transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            <span data-translate="cookies_back_home">Volver al inicio</span>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- Pie de página -->
+    <Footer />
+  </div>
+
+  <script>
+    // Sistema de traducción
+    const translations = {
+      es: {
+        nav_inicio: "Inicio",
+        nav_servicios: "Servicios",
+        nav_cotizar: "Cotizar",
+        nav_nosotros: "Nosotros",
+        nav_contacto: "Contacto",
+        cookies_title: "Política de Cookies",
+        cookies_intro: "Esta política de cookies explica qué son las cookies, cómo AutoSeguro las utiliza en nuestro sitio web y cómo puedes controlar su uso. Al continuar utilizando nuestro sitio, aceptas el uso de cookies de acuerdo con esta política.",
+        cookies_what_title: "1. ¿Qué son las Cookies?",
+        cookies_what_text: "Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo (computadora, tablet o móvil) cuando visitas un sitio web. Permiten que el sitio web reconozca tu dispositivo y recuerde cierta información sobre tu visita.",
+        cookies_what_example: "Ejemplo: Cuando inicias sesión en tu cuenta de AutoSeguro, las cookies nos permiten recordarte para que no tengas que iniciar sesión nuevamente en cada visita.",
+        cookies_types_title: "2. Tipos de Cookies que Utilizamos",
+        cookies_essential_title: "Cookies Esenciales",
+        cookies_essential_text: "Son necesarias para el funcionamiento básico del sitio web. Sin estas cookies, el sitio no puede funcionar correctamente.",
+        cookies_essential_item1: "Mantener la sesión de usuario activa",
+        cookies_essential_item2: "Gestionar el carrito de cotizaciones",
+        cookies_essential_item3: "Proteger contra fraudes y seguridad",
+        cookies_performance_title: "Cookies de Rendimiento",
+        cookies_performance_text: "Recopilan información sobre cómo los visitantes utilizan el sitio web para ayudarnos a mejorar su funcionamiento.",
+        cookies_performance_item1: "Analizar el tráfico del sitio",
+        cookies_performance_item2: "Medir el tiempo de carga de páginas",
+        cookies_performance_item3: "Identificar páginas populares",
+        cookies_functional_title: "Cookies Funcionales",
+        cookies_functional_text: "Permiten que el sitio web recuerde las elecciones que has hecho para proporcionar funcionalidades mejoradas.",
+        cookies_functional_item1: "Recordar tus preferencias de idioma",
+        cookies_functional_item2: "Guardar información de cotizaciones previas",
+        cookies_functional_item3: "Personalizar el contenido mostrado",
+        cookies_marketing_title: "Cookies de Marketing",
+        cookies_marketing_text: "Se utilizan para mostrar anuncios relevantes para ti y tus intereses, tanto en nuestro sitio como en sitios de terceros.",
+        cookies_marketing_item1: "Personalizar anuncios según tu comportamiento",
+        cookies_marketing_item2: "Medir la efectividad de campañas publicitarias",
+        cookies_marketing_item3: "Limitar cuántas veces ves un anuncio",
+        cookies_thirdparty_title: "3. Cookies de Terceros",
+        cookies_thirdparty_text: "Utilizamos servicios de terceros que también pueden colocar cookies en tu dispositivo:",
+        cookies_table_service: "Servicio",
+        cookies_table_purpose: "Propósito",
+        cookies_table_link: "Política",
+        cookies_google_analytics: "Análisis de tráfico y comportamiento del usuario",
+        cookies_facebook_pixel: "Publicidad personalizada y remarketing",
+        cookies_google_ads: "Gestión de campañas publicitarias",
+        cookies_view_policy: "Ver política",
+        cookies_duration_title: "4. Duración de las Cookies",
+        cookies_session_title: "Cookies de Sesión",
+        cookies_session_text: "Se eliminan automáticamente cuando cierras tu navegador. Se utilizan para mantener tu sesión activa durante tu visita.",
+        cookies_persistent_title: "Cookies Persistentes",
+        cookies_persistent_text: "Permanecen en tu dispositivo por un período específico (generalmente de 30 días a 1 año) para recordar tus preferencias.",
+        cookies_control_title: "5. Cómo Controlar las Cookies",
+        cookies_control_text: "Tienes varias opciones para controlar el uso de cookies:",
+        cookies_control_browser_title: "Configuración del Navegador",
+        cookies_control_browser_text: "Puedes configurar tu navegador para que rechace todas las cookies o para que te avise cuando se envía una cookie. Ten en cuenta que deshabilitar cookies puede afectar la funcionalidad del sitio.",
+        cookies_control_banner_title: "Banner de Cookies",
+        cookies_control_banner_text: "Nuestro sitio muestra un banner donde puedes aceptar o rechazar categorías específicas de cookies según tus preferencias.",
+        cookies_control_settings_title: "Panel de Preferencias",
+        cookies_control_settings_text: "Puedes acceder a nuestro panel de preferencias de cookies en cualquier momento haciendo clic en el ícono de cookies en la esquina inferior del sitio.",
+        cookies_browsers_title: "6. Guía de Configuración por Navegador",
+        cookies_configure: "Configurar cookies",
+        cookies_updates_title: "7. Actualizaciones de esta Política",
+        cookies_updates_text: "Podemos actualizar esta política de cookies periódicamente para reflejar cambios en nuestras prácticas o por razones operativas, legales o regulatorias. Te recomendamos revisar esta página regularmente para estar informado sobre nuestro uso de cookies.",
+        cookies_contact_title: "8. Contacto",
+        cookies_contact_text: "Si tienes alguna pregunta sobre nuestra política de cookies o su uso en nuestro sitio web, puedes contactarnos:",
+        cookies_contact_email: "Correo electrónico:",
+        cookies_contact_phone: "Teléfono:",
+        cookies_contact_address: "Dirección:",
+        cookies_compliance_title: "Cumplimiento Normativo",
+        cookies_compliance_gdpr: "RGPD: Nuestra política cumple con el Reglamento General de Protección de Datos (UE) 2016/679.",
+        cookies_compliance_ccpa: "CCPA: Cumplimos con la Ley de Privacidad del Consumidor de California.",
+        cookies_last_updated: "Última actualización: 15 de noviembre de 2023",
+        cookies_back_home: "Volver al inicio",
+        footer_about: "Protección integral para tu vehículo con el mejor servicio del mercado.",
+        footer_links_title: "Enlaces rápidos",
+        footer_home: "Inicio",
+        footer_services: "Servicios",
+        footer_quote: "Cotizar",
+        footer_about: "Nosotros",
+        footer_legal_title: "Legal",
+        footer_privacy: "Política de privacidad",
+        footer_terms: "Términos y condiciones",
+        footer_cookies: "Política de cookies",
+        footer_contact_title: "Contacto",
+        footer_phone: "+1 (555) 123-4567",
+        footer_email: "info@autoseguro.com",
+        footer_address: "123 Calle Principal, Ciudad, País",
+        footer_copyright: "C. Eduardo Carrasco Dev. Todos los derechos reservados."
+      },
+      en: {
+        nav_inicio: "Home",
+        nav_servicios: "Services",
+        nav_cotizar: "Quote",
+        nav_nosotros: "About Us",
+        nav_contacto: "Contact",
+        cookies_title: "Cookie Policy",
+        cookies_intro: "This cookie policy explains what cookies are, how AutoSeguro uses them on our website, and how you can control their use. By continuing to use our site, you accept the use of cookies in accordance with this policy.",
+        cookies_what_title: "1. What are Cookies?",
+        cookies_what_text: "Cookies are small text files that are stored on your device (computer, tablet or mobile) when you visit a website. They allow the website to recognize your device and remember certain information about your visit.",
+        cookies_what_example: "Example: When you log into your AutoSeguro account, cookies allow us to remember you so you don't have to log in again on each visit.",
+        cookies_types_title: "2. Types of Cookies We Use",
+        cookies_essential_title: "Essential Cookies",
+        cookies_essential_text: "These are necessary for the basic functioning of the website. Without these cookies, the site cannot function properly.",
+        cookies_essential_item1: "Keep user session active",
+        cookies_essential_item2: "Manage quote cart",
+        cookies_essential_item3: "Fraud protection and security",
+        cookies_performance_title: "Performance Cookies",
+        cookies_performance_text: "These collect information about how visitors use the website to help us improve its functioning.",
+        cookies_performance_item1: "Analyze site traffic",
+        cookies_performance_item2: "Measure page load times",
+        cookies_performance_item3: "Identify popular pages",
+        cookies_functional_title: "Functional Cookies",
+        cookies_functional_text: "These allow the website to remember choices you have made to provide enhanced functionality.",
+        cookies_functional_item1: "Remember your language preferences",
+        cookies_functional_item2: "Save previous quote information",
+        cookies_functional_item3: "Personalize displayed content",
+        cookies_marketing_title: "Marketing Cookies",
+        cookies_marketing_text: "These are used to display advertisements relevant to you and your interests, both on our site and on third-party sites.",
+        cookies_marketing_item1: "Personalize ads based on your behavior",
+        cookies_marketing_item2: "Measure advertising campaign effectiveness",
+        cookies_marketing_item3: "Limit how many times you see an ad",
+        cookies_thirdparty_title: "3. Third-Party Cookies",
+        cookies_thirdparty_text: "We use third-party services that may also place cookies on your device:",
+        cookies_table_service: "Service",
+        cookies_table_purpose: "Purpose",
+        cookies_table_link: "Policy",
+        cookies_google_analytics: "Traffic analysis and user behavior",
+        cookies_facebook_pixel: "Personalized advertising and remarketing",
+        cookies_google_ads: "Advertising campaign management",
+        cookies_view_policy: "View policy",
+        cookies_duration_title: "4. Cookie Duration",
+        cookies_session_title: "Session Cookies",
+        cookies_session_text: "These are automatically deleted when you close your browser. They are used to keep your session active during your visit.",
+        cookies_persistent_title: "Persistent Cookies",
+        cookies_persistent_text: "These remain on your device for a specific period (typically 30 days to 1 year) to remember your preferences.",
+        cookies_control_title: "5. How to Control Cookies",
+        cookies_control_text: "You have several options to control the use of cookies:",
+        cookies_control_browser_title: "Browser Settings",
+        cookies_control_browser_text: "You can configure your browser to reject all cookies or to alert you when a cookie is sent. Note that disabling cookies may affect site functionality.",
+        cookies_control_banner_title: "Cookie Banner",
+        cookies_control_banner_text: "Our site displays a banner where you can accept or reject specific categories of cookies according to your preferences.",
+        cookies_control_settings_title: "Preferences Panel",
+        cookies_control_settings_text: "You can access our cookie preferences panel at any time by clicking the cookie icon in the bottom corner of the site.",
+        cookies_browsers_title: "6. Browser Configuration Guide",
+        cookies_configure: "Configure cookies",
+        cookies_updates_title: "7. Updates to this Policy",
+        cookies_updates_text: "We may update this cookie policy periodically to reflect changes in our practices or for operational, legal or regulatory reasons. We recommend reviewing this page regularly to stay informed about our use of cookies.",
+        cookies_contact_title: "8. Contact",
+        cookies_contact_text: "If you have any questions about our cookie policy or their use on our website, you can contact us:",
+        cookies_contact_email: "Email:",
+        cookies_contact_phone: "Phone:",
+        cookies_contact_address: "Address:",
+        cookies_compliance_title: "Regulatory Compliance",
+        cookies_compliance_gdpr: "GDPR: Our policy complies with the General Data Protection Regulation (EU) 2016/679.",
+        cookies_compliance_ccpa: "CCPA: We comply with the California Consumer Privacy Act.",
+        cookies_last_updated: "Last updated: November 15, 2023",
+        cookies_back_home: "Back to home",
+        footer_about: "Comprehensive protection for your vehicle with the best service in the market.",
+        footer_links_title: "Quick links",
+        footer_home: "Home",
+        footer_services: "Services",
+        footer_quote: "Quote",
+        footer_about: "About Us",
+        footer_legal_title: "Legal",
+        footer_privacy: "Privacy Policy",
+        footer_terms: "Terms and Conditions",
+        footer_cookies: "Cookie Policy",
+        footer_contact_title: "Contact",
+        footer_phone: "+1 (555) 123-4567",
+        footer_email: "info@autoseguro.com",
+        footer_address: "123 Main Street, City, Country",
+        footer_copyright: "C. Eduardo Carrasco Dev. All rights reserved."
+      }
+    };
+
+    let currentLang = 'es';
+
+    // Función para cambiar el idioma
+    function changeLanguage(lang) {
+      currentLang = lang;
+      document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[lang][key]) {
+          element.textContent = translations[lang][key];
+        }
+      });
+      
+      // Actualizar el botón de idioma
+      document.getElementById('lang-toggle').textContent = lang === 'es' ? 'EN' : 'ES';
+    }
+
+    // Event listener para el botón de cambio de idioma
+    document.getElementById('lang-toggle').addEventListener('click', function() {
+      changeLanguage(currentLang === 'es' ? 'en' : 'es');
+    });
+
+     document.addEventListener('DOMContentLoaded', () => {
+        const LANG_KEY = 'userLanguagePreference';
+        const defaultLang = 'ES';
+        
+        // La clave es la persistencia
+        const savedLang = localStorage.getItem(LANG_KEY);
+        const currentLanguage = savedLang || defaultLang;
+
+   
+
+    
+         if (currentLanguage === 'EN') {
+             changeLanguage('en');
+        } else {
+             changeLanguage('es'); 
+         }
+    });
+
+    // Event listener para el menú móvil
+    document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</Layout>

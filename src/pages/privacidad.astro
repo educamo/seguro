@@ -1,0 +1,330 @@
+---
+// src/pages/privacidad.astro
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Política de Privacidad | AutoSeguro">
+  <div id="app" class="min-h-screen bg-white">
+    <!-- Barra de navegación -->
+    <Header />
+
+    <!-- Contenido principal -->
+    <main class="container mx-auto px-6 py-12 md:py-20">
+      <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl md:text-4xl font-bold text-blue-900 mb-8" data-translate="privacy_title">Política de Privacidad</h1>
+        
+        <div class="prose prose-lg max-w-none">
+          <p class="text-black mb-6" data-translate="privacy_intro">
+            En AutoSeguro, nos comprometemos a proteger la privacidad y seguridad de tus datos personales. Esta política de privacidad explica cómo recopilamos, utilizamos y protegemos tu información cuando utilizas nuestros servicios.
+          </p>
+          
+          <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4" data-translate="privacy_collection_title">1. Recopilación de Información</h2>
+          <p class="text-black mb-4" data-translate="privacy_collection_text">
+            Recopilamos información personal cuando solicitas una cotización, contratas un seguro o interactúas con nuestro sitio web. Esta información puede incluir:
+          </p>
+          <ul class="list-disc pl-6 text-black mb-6 space-y-2">
+            <li data-translate="privacy_collection_item1">Nombre completo y datos de contacto</li>
+            <li data-translate="privacy_collection_item2">Información del vehículo (marca, modelo, año, placa)</li>
+            <li data-translate="privacy_collection_item3">Historial de conducción y antecedentes</li>
+            <li data-translate="privacy_collection_item4">Información de pago y facturación</li>
+            <li data-translate="privacy_collection_item5">Datos de navegación y uso del sitio web</li>
+          </ul>
+          
+          <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4" data-translate="privacy_usage_title">2. Uso de la Información</h2>
+          <p class="text-black mb-4" data-translate="privacy_usage_text">
+            Utilizamos tu información personal para los siguientes propósitos:
+          </p>
+          <ul class="list-disc pl-6 text-black mb-6 space-y-2">
+            <li data-translate="privacy_usage_item1">Proporcionar cotizaciones y servicios de seguros</li>
+            <li data-translate="privacy_usage_item2">Procesar solicitudes y reclamaciones</li>
+            <li data-translate="privacy_usage_item3">Comunicarnos contigo sobre tu póliza</li>
+            <li data-translate="privacy_usage_item4">Mejorar nuestros productos y servicios</li>
+            <li data-translate="privacy_usage_item5">Cumplir con obligaciones legales y regulatorias</li>
+          </ul>
+          
+          <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4" data-translate="privacy_sharing_title">3. Compartir Información</h2>
+          <p class="text-black mb-4" data-translate="privacy_sharing_text">
+            No vendemos, alquilamos ni comercializamos tu información personal. Solo compartimos tus datos en las siguientes circunstancias:
+          </p>
+          <ul class="list-disc pl-6 text-black mb-6 space-y-2">
+            <li data-translate="privacy_sharing_item1">Con tu consentimiento explícito</li>
+            <li data-translate="privacy_sharing_item2">Con proveedores de servicios que nos ayudan a operar nuestro negocio</li>
+            <li data-translate="privacy_sharing_item3">Cuando sea requerido por ley o proceso legal</li>
+            <li data-translate="privacy_sharing_item4">Para proteger nuestros derechos, propiedad o seguridad</li>
+          </ul>
+          
+          <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4" data-translate="privacy_security_title">4. Seguridad de los Datos</h2>
+          <p class="text-black mb-6" data-translate="privacy_security_text">
+            Implementamos medidas de seguridad técnicas y organizativas apropiadas para proteger tu información contra acceso no autorizado, alteración, divulgación o destrucción. Utilizamos encriptación SSL, firewalls y protocolos de seguridad estándar de la industria.
+          </p>
+          
+          <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4" data-translate="privacy_cookies_title">5. Cookies y Tecnologías Similares</h2>
+          <p class="text-black mb-4" data-translate="privacy_cookies_text">
+            Utilizamos cookies y tecnologías similares para mejorar tu experiencia en nuestro sitio web. Las cookies nos permiten:
+          </p>
+          <ul class="list-disc pl-6 text-black mb-6 space-y-2">
+            <li data-translate="privacy_cookies_item1">Recordar tus preferencias</li>
+            <li data-translate="privacy_cookies_item2">Analizar el tráfico del sitio web</li>
+            <li data-translate="privacy_cookies_item3">Personalizar contenido y anuncios</li>
+            <li data-translate="privacy_cookies_item4">Mejorar la funcionalidad del sitio</li>
+          </ul>
+          <p class="text-black mb-6" data-translate="privacy_cookies_control">
+            Puedes controlar el uso de cookies a través de la configuración de tu navegador.
+          </p>
+          
+          <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4" data-translate="privacy_rights_title">6. Tus Derechos</h2>
+          <p class="text-black mb-4" data-translate="privacy_rights_text">
+            Tienes derecho a:
+          </p>
+          <ul class="list-disc pl-6 text-black mb-6 space-y-2">
+            <li data-translate="privacy_rights_item1">Acceder a tus datos personales</li>
+            <li data-translate="privacy_rights_item2">Corregir información inexacta</li>
+            <li data-translate="privacy_rights_item3">Solicitar eliminación de tus datos</li>
+            <li data-translate="privacy_rights_item4">Limitar el procesamiento de tu información</li>
+            <li data-translate="privacy_rights_item5">Portabilidad de datos</li>
+          </ul>
+          
+          <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4" data-translate="privacy_retention_title">7. Retención de Datos</h2>
+          <p class="text-black mb-6" data-translate="privacy_retention_text">
+            Conservamos tu información personal solo el tiempo necesario para cumplir con los propósitos para los cuales fue recopilada, incluyendo requerimientos legales, contables o de reporte.
+          </p>
+          
+          <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4" data-translate="privacy_children_title">8. Protección de Menores</h2>
+          <p class="text-black mb-6" data-translate="privacy_children_text">
+            Nuestros servicios no están dirigidos a menores de 18 años. No recopilamos intencionalmente información personal de menores. Si descubrimos que hemos recopilado información de un menor, tomaremos medidas para eliminarla inmediatamente.
+          </p>
+          
+          <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4" data-translate="privacy_changes_title">9. Cambios a esta Política</h2>
+          <p class="text-black mb-6" data-translate="privacy_changes_text">
+            Podemos actualizar esta política de privacidad periódicamente. Te notificaremos cualquier cambio significativo publicando la nueva política en nuestro sitio web y actualizando la fecha de última modificación.
+          </p>
+          
+          <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4" data-translate="privacy_contact_title">10. Contacto</h2>
+          <p class="text-black mb-4" data-translate="privacy_contact_text">
+            Si tienes preguntas sobre esta política de privacidad o necesitas ejercer tus derechos, puedes contactarnos:
+          </p>
+          <div class="bg-gray-50 p-6 rounded-lg mb-6">
+            <p class="text-black mb-2"><strong data-translate="privacy_contact_email">Correo electrónico:</strong> privacy@autoseguro.com</p>
+            <p class="text-black mb-2"><strong data-translate="privacy_contact_phone">Teléfono:</strong> +1 (555) 123-4567</p>
+            <p class="text-black"><strong data-translate="privacy_contact_address">Dirección:</strong> 123 Calle Principal, Ciudad, País</p>
+          </div>
+          
+          <p class="text-black mt-8 text-sm" data-translate="privacy_last_updated">
+            Última actualización: 15 de noviembre de 2023
+          </p>
+        </div>
+        
+        <div class="mt-12 text-center">
+          <a href="/" class="inline-flex items-center px-6 py-3 bg-orange-500 text-white font-semibold rounded-md hover:bg-orange-600 transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            <span data-translate="privacy_back_home">Volver al inicio</span>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- Pie de página -->
+    <Footer />
+  </div>
+
+  <script>
+    // Sistema de traducción
+    const translations = {
+      es: {
+        nav_inicio: "Inicio",
+        nav_servicios: "Servicios",
+        nav_cotizar: "Cotizar",
+        nav_nosotros: "Nosotros",
+        nav_contacto: "Contacto",
+        privacy_title: "Política de Privacidad",
+        privacy_intro: "En AutoSeguro, nos comprometemos a proteger la privacidad y seguridad de tus datos personales. Esta política de privacidad explica cómo recopilamos, utilizamos y protegemos tu información cuando utilizas nuestros servicios.",
+        privacy_collection_title: "1. Recopilación de Información",
+        privacy_collection_text: "Recopilamos información personal cuando solicitas una cotización, contratas un seguro o interactúas con nuestro sitio web. Esta información puede incluir:",
+        privacy_collection_item1: "Nombre completo y datos de contacto",
+        privacy_collection_item2: "Información del vehículo (marca, modelo, año, placa)",
+        privacy_collection_item3: "Historial de conducción y antecedentes",
+        privacy_collection_item4: "Información de pago y facturación",
+        privacy_collection_item5: "Datos de navegación y uso del sitio web",
+        privacy_usage_title: "2. Uso de la Información",
+        privacy_usage_text: "Utilizamos tu información personal para los siguientes propósitos:",
+        privacy_usage_item1: "Proporcionar cotizaciones y servicios de seguros",
+        privacy_usage_item2: "Procesar solicitudes y reclamaciones",
+        privacy_usage_item3: "Comunicarnos contigo sobre tu póliza",
+        privacy_usage_item4: "Mejorar nuestros productos y servicios",
+        privacy_usage_item5: "Cumplir con obligaciones legales y regulatorias",
+        privacy_sharing_title: "3. Compartir Información",
+        privacy_sharing_text: "No vendemos, alquilamos ni comercializamos tu información personal. Solo compartimos tus datos en las siguientes circunstancias:",
+        privacy_sharing_item1: "Con tu consentimiento explícito",
+        privacy_sharing_item2: "Con proveedores de servicios que nos ayudan a operar nuestro negocio",
+        privacy_sharing_item3: "Cuando sea requerido por ley o proceso legal",
+        privacy_sharing_item4: "Para proteger nuestros derechos, propiedad o seguridad",
+        privacy_security_title: "4. Seguridad de los Datos",
+        privacy_security_text: "Implementamos medidas de seguridad técnicas y organizativas apropiadas para proteger tu información contra acceso no autorizado, alteración, divulgación o destrucción. Utilizamos encriptación SSL, firewalls y protocolos de seguridad estándar de la industria.",
+        privacy_cookies_title: "5. Cookies y Tecnologías Similares",
+        privacy_cookies_text: "Utilizamos cookies y tecnologías similares para mejorar tu experiencia en nuestro sitio web. Las cookies nos permiten:",
+        privacy_cookies_item1: "Recordar tus preferencias",
+        privacy_cookies_item2: "Analizar el tráfico del sitio web",
+        privacy_cookies_item3: "Personalizar contenido y anuncios",
+        privacy_cookies_item4: "Mejorar la funcionalidad del sitio",
+        privacy_cookies_control: "Puedes controlar el uso de cookies a través de la configuración de tu navegador.",
+        privacy_rights_title: "6. Tus Derechos",
+        privacy_rights_text: "Tienes derecho a:",
+        privacy_rights_item1: "Acceder a tus datos personales",
+        privacy_rights_item2: "Corregir información inexacta",
+        privacy_rights_item3: "Solicitar eliminación de tus datos",
+        privacy_rights_item4: "Limitar el procesamiento de tu información",
+        privacy_rights_item5: "Portabilidad de datos",
+        privacy_retention_title: "7. Retención de Datos",
+        privacy_retention_text: "Conservamos tu información personal solo el tiempo necesario para cumplir con los propósitos para los cuales fue recopilada, incluyendo requerimientos legales, contables o de reporte.",
+        privacy_children_title: "8. Protección de Menores",
+        privacy_children_text: "Nuestros servicios no están dirigidos a menores de 18 años. No recopilamos intencionalmente información personal de menores. Si descubrimos que hemos recopilado información de un menor, tomaremos medidas para eliminarla inmediatamente.",
+        privacy_changes_title: "9. Cambios a esta Política",
+        privacy_changes_text: "Podemos actualizar esta política de privacidad periódicamente. Te notificaremos cualquier cambio significativo publicando la nueva política en nuestro sitio web y actualizando la fecha de última modificación.",
+        privacy_contact_title: "10. Contacto",
+        privacy_contact_text: "Si tienes preguntas sobre esta política de privacidad o necesitas ejercer tus derechos, puedes contactarnos:",
+        privacy_contact_email: "Correo electrónico:",
+        privacy_contact_phone: "Teléfono:",
+        privacy_contact_address: "Dirección:",
+        privacy_last_updated: "Última actualización: 15 de noviembre de 2023",
+        privacy_back_home: "Volver al inicio",
+        footer_about: "Protección integral para tu vehículo con el mejor servicio del mercado.",
+        footer_links_title: "Enlaces rápidos",
+        footer_home: "Inicio",
+        footer_services: "Servicios",
+        footer_quote: "Cotizar",
+        footer_about: "Nosotros",
+        footer_legal_title: "Legal",
+        footer_privacy: "Política de privacidad",
+        footer_terms: "Términos y condiciones",
+        footer_cookies: "Política de cookies",
+        footer_contact_title: "Contacto",
+        footer_phone: "+1 (555) 123-4567",
+        footer_email: "info@autoseguro.com",
+        footer_address: "123 Calle Principal, Ciudad, País",
+        footer_copyright: "C. Eduardo Carrasco Dev. Todos los derechos reservados."
+      },
+      en: {
+        nav_inicio: "Home",
+        nav_servicios: "Services",
+        nav_cotizar: "Quote",
+        nav_nosotros: "About Us",
+        nav_contacto: "Contact",
+        privacy_title: "Privacy Policy",
+        privacy_intro: "At AutoSeguro, we are committed to protecting the privacy and security of your personal data. This privacy policy explains how we collect, use and protect your information when you use our services.",
+        privacy_collection_title: "1. Information Collection",
+        privacy_collection_text: "We collect personal information when you request a quote, purchase insurance, or interact with our website. This information may include:",
+        privacy_collection_item1: "Full name and contact information",
+        privacy_collection_item2: "Vehicle information (make, model, year, license plate)",
+        privacy_collection_item3: "Driving history and records",
+        privacy_collection_item4: "Payment and billing information",
+        privacy_collection_item5: "Website navigation and usage data",
+        privacy_usage_title: "2. Use of Information",
+        privacy_usage_text: "We use your personal information for the following purposes:",
+        privacy_usage_item1: "Provide quotes and insurance services",
+        privacy_usage_item2: "Process applications and claims",
+        privacy_usage_item3: "Communicate with you about your policy",
+        privacy_usage_item4: "Improve our products and services",
+        privacy_usage_item5: "Comply with legal and regulatory obligations",
+        privacy_sharing_title: "3. Sharing Information",
+        privacy_sharing_text: "We do not sell, rent or market your personal information. We only share your data in the following circumstances:",
+        privacy_sharing_item1: "With your explicit consent",
+        privacy_sharing_item2: "With service providers who help us operate our business",
+        privacy_sharing_item3: "When required by law or legal process",
+        privacy_sharing_item4: "To protect our rights, property or safety",
+        privacy_security_title: "4. Data Security",
+        privacy_security_text: "We implement appropriate technical and organizational security measures to protect your information against unauthorized access, alteration, disclosure or destruction. We use SSL encryption, firewalls and industry-standard security protocols.",
+        privacy_cookies_title: "5. Cookies and Similar Technologies",
+        privacy_cookies_text: "We use cookies and similar technologies to improve your experience on our website. Cookies allow us to:",
+        privacy_cookies_item1: "Remember your preferences",
+        privacy_cookies_item2: "Analyze website traffic",
+        privacy_cookies_item3: "Personalize content and advertisements",
+        privacy_cookies_item4: "Improve site functionality",
+        privacy_cookies_control: "You can control the use of cookies through your browser settings.",
+        privacy_rights_title: "6. Your Rights",
+        privacy_rights_text: "You have the right to:",
+        privacy_rights_item1: "Access your personal data",
+        privacy_rights_item2: "Correct inaccurate information",
+        privacy_rights_item3: "Request deletion of your data",
+        privacy_rights_item4: "Limit processing of your information",
+        privacy_rights_item5: "Data portability",
+        privacy_retention_title: "7. Data Retention",
+        privacy_retention_text: "We retain your personal information only as long as necessary to fulfill the purposes for which it was collected, including legal, accounting or reporting requirements.",
+        privacy_children_title: "8. Protection of Minors",
+        privacy_children_text: "Our services are not directed at minors under 18 years of age. We do not intentionally collect personal information from minors. If we discover that we have collected information from a minor, we will take steps to delete it immediately.",
+        privacy_changes_title: "9. Changes to this Policy",
+        privacy_changes_text: "We may update this privacy policy from time to time. We will notify you of any significant changes by posting the new policy on our website and updating the last modified date.",
+        privacy_contact_title: "10. Contact",
+        privacy_contact_text: "If you have questions about this privacy policy or need to exercise your rights, you can contact us:",
+        privacy_contact_email: "Email:",
+        privacy_contact_phone: "Phone:",
+        privacy_contact_address: "Address:",
+        privacy_last_updated: "Last updated: November 15, 2023",
+        privacy_back_home: "Back to home",
+        footer_about: "Comprehensive protection for your vehicle with the best service in the market.",
+        footer_links_title: "Quick links",
+        footer_home: "Home",
+        footer_services: "Services",
+        footer_quote: "Quote",
+        footer_about: "About Us",
+        footer_legal_title: "Legal",
+        footer_privacy: "Privacy Policy",
+        footer_terms: "Terms and Conditions",
+        footer_cookies: "Cookie Policy",
+        footer_contact_title: "Contact",
+        footer_phone: "+1 (555) 123-4567",
+        footer_email: "info@autoseguro.com",
+        footer_address: "123 Main Street, City, Country",
+        footer_copyright: "C. Eduardo Carrasco Dev. All rights reserved."
+      }
+    };
+
+    let currentLang = 'es';
+
+    // Función para cambiar el idioma
+    function changeLanguage(lang) {
+      currentLang = lang;
+      document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[lang][key]) {
+          element.textContent = translations[lang][key];
+        }
+      });
+      
+      // Actualizar el botón de idioma
+      document.getElementById('lang-toggle').textContent = lang === 'es' ? 'EN' : 'ES';
+    }
+
+    // Event listener para el botón de cambio de idioma
+    document.getElementById('lang-toggle').addEventListener('click', function() {
+      changeLanguage(currentLang === 'es' ? 'en' : 'es');
+    });
+
+     document.addEventListener('DOMContentLoaded', () => {
+        const LANG_KEY = 'userLanguagePreference';
+        const defaultLang = 'ES';
+        
+        // La clave es la persistencia
+        const savedLang = localStorage.getItem(LANG_KEY);
+        const currentLanguage = savedLang || defaultLang;
+
+   
+
+    
+         if (currentLanguage === 'EN') {
+             changeLanguage('en');
+        } else {
+             changeLanguage('es'); 
+         }
+    });
+
+    // Event listener para el menú móvil
+    document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</Layout>

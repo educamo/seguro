@@ -1,11 +1,495 @@
 ---
-import Welcome from '../components/Welcome.astro';
+// Configuración de Astro
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="AutoSeguro | Protección para tu vehículo">
+  <div id="app" class="min-h-screen bg-white">
+    <!-- Barra de navegación -->
+    <Header />
+
+    <!-- Sección Hero -->
+    <section id="inicio" class="relative py-20 md:py-32">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-10 md:mb-0">
+            <h1 class="text-4xl md:text-5xl font-bold text-blue-900 mb-6" data-translate="hero_title">Protección completa para tu vehículo</h1>
+            <p class="text-lg text-black mb-8" data-translate="hero_subtitle">Ofrecemos seguros de auto con cobertura integral, precios competitivos y atención personalizada para que conduzcas con tranquilidad.</p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="#cotizar" class="px-8 py-3 bg-orange-500 text-white font-semibold rounded-md hover:bg-orange-600 transition-colors duration-300 text-center" data-translate="hero_cta_primary">Cotiza ahora</a>
+              <a href="#servicios" class="px-8 py-3 border-2 border-blue-900 text-blue-900 font-semibold rounded-md hover:bg-blue-900 hover:text-white transition-colors duration-300 text-center" data-translate="hero_cta_secondary">Conoce más</a>
+            </div>
+          </div>
+          <div class="md:w-1/2 md:pl-12">
+            <img src="https://picsum.photos/seed/carinsurance/600/400.jpg" alt="Seguro de auto" class="rounded-lg shadow-lg">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Servicios -->
+    <section id="servicios" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-blue-900 text-center mb-16" data-translate="services_title">Nuestras coberturas</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-blue-900 mb-4" data-translate="service1_title">Cobertura completa</h3>
+            <p class="text-black" data-translate="service1_desc">Protección integral contra daños, robo, accidentes y responsabilidad civil. Conduce sin preocupaciones.</p>
+          </div>
+          
+          <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-blue-900 mb-4" data-translate="service2_title">Asistencia 24/7</h3>
+            <p class="text-black" data-translate="service2_desc">Servicio de auxilio vial las 24 horas del día, los 365 días del año. Estamos siempre para ti.</p>
+          </div>
+          
+          <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-blue-900 mb-4" data-translate="service3_title">Reparación rápida</h3>
+            <p class="text-black" data-translate="service3_desc">Red de talleres certificados para reparaciones rápidas y de calidad. Tu vehículo listo en tiempo récord.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Cotización -->
+    <section id="cotizar" class="py-20">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-blue-900 text-center mb-16" data-translate="quote_title">Obtén tu cotización</h2>
+        
+        <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+          <form id="quote-form">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <label for="name" class="block text-black font-medium mb-2" data-translate="form_name">Nombre completo</label>
+                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-900" required>
+              </div>
+              
+              <div>
+                <label for="email" class="block text-black font-medium mb-2" data-translate="form_email">Correo electrónico</label>
+                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-900" required>
+              </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <label for="phone" class="block text-black font-medium mb-2" data-translate="form_phone">Teléfono</label>
+                <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-900" required>
+              </div>
+              
+              <div>
+                <label for="vehicle-type" class="block text-black font-medium mb-2" data-translate="form_vehicle">Tipo de vehículo</label>
+                <select id="vehicle-type" name="vehicle-type" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-900" required>
+                  <option value="" data-translate="form_select_vehicle">Selecciona una opción</option>
+                  <option value="sedan" data-translate="form_sedan">Sedán</option>
+                  <option value="suv" data-translate="form_suv">SUV</option>
+                  <option value="pickup" data-translate="form_pickup">Pickup</option>
+                  <option value="motorcycle" data-translate="form_motorcycle">Motocicleta</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="mb-6">
+              <label for="coverage" class="block text-black font-medium mb-2" data-translate="form_coverage">Tipo de cobertura</label>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="flex items-center">
+                  <input type="radio" id="basic" name="coverage" value="basic" class="mr-2">
+                  <label for="basic" class="text-black" data-translate="form_basic">Básica</label>
+                </div>
+                <div class="flex items-center">
+                  <input type="radio" id="medium" name="coverage" value="medium" class="mr-2">
+                  <label for="medium" class="text-black" data-translate="form_medium">Intermedia</label>
+                </div>
+                <div class="flex items-center">
+                  <input type="radio" id="premium" name="coverage" value="premium" class="mr-2" checked>
+                  <label for="premium" class="text-black" data-translate="form_premium">Premium</label>
+                </div>
+              </div>
+            </div>
+            
+            <div class="text-center">
+              <button type="submit" class="px-8 py-3 bg-orange-500 text-white font-semibold rounded-md hover:bg-orange-600 transition-colors duration-300" data-translate="form_submit">Obtener cotización</button>
+            </div>
+          </form>
+          
+          <div id="quote-result" class="hidden mt-8 p-6 bg-blue-50 rounded-lg">
+            <h3 class="text-xl font-bold text-blue-900 mb-4" data-translate="quote_result_title">Tu cotización</h3>
+            <p class="text-black mb-4" data-translate="quote_result_desc">Gracias por tu interés. Uno de nuestros agentes te contactará pronto con una cotización personalizada.</p>
+            <p class="text-2xl font-bold text-blue-900">$XXX <span class="text-sm font-normal text-black" data-translate="quote_result_period">mensuales</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Testimonios -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-blue-900 text-center mb-16" data-translate="testimonials_title">Lo que dicen nuestros clientes</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <div class="flex items-center mb-4">
+              <img src="https://picsum.photos/seed/person1/60/60.jpg" alt="Cliente" class="w-12 h-12 rounded-full mr-4">
+              <div>
+                <h4 class="font-bold text-black">María García</h4>
+                <div class="flex text-orange-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <p class="text-black" data-translate="testimonial1">Excelente servicio. Tuve un accidente y me atendieron de inmediato. El proceso de reclamación fue muy sencillo y rápido.</p>
+          </div>
+          
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <div class="flex items-center mb-4">
+              <img src="https://picsum.photos/seed/person2/60/60.jpg" alt="Cliente" class="w-12 h-12 rounded-full mr-4">
+              <div>
+                <h4 class="font-bold text-black">Juan Rodríguez</h4>
+                <div class="flex text-orange-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <p class="text-black" data-translate="testimonial2">Las mejores tarifas del mercado. Comparé con varias aseguradoras y AutoSeguro me ofreció la mejor cobertura al precio más accesible.</p>
+          </div>
+          
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <div class="flex items-center mb-4">
+              <img src="https://picsum.photos/seed/person3/60/60.jpg" alt="Cliente" class="w-12 h-12 rounded-full mr-4">
+              <div>
+                <h4 class="font-bold text-black">Ana Martínez</h4>
+                <div class="flex text-orange-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <p class="text-black" data-translate="testimonial3">El equipo de atención al cliente es excepcional. Siempre están dispuestos a ayudar y resolver cualquier duda de manera amable y profesional.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Nosotros -->
+    <section id="nosotros" class="py-20">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-10 md:mb-0">
+            <img src="https://picsum.photos/seed/team/600/400.jpg" alt="Nuestro equipo" class="rounded-lg shadow-lg">
+          </div>
+          <div class="md:w-1/2 md:pl-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-6" data-translate="about_title">Sobre nosotros</h2>
+            <p class="text-lg text-black mb-6" data-translate="about_desc1">Con más de 15 años de experiencia en el sector asegurador, en AutoSeguro nos dedicamos a proteger lo más valioso para ti: tu vehículo y tu tranquilidad.</p>
+            <p class="text-lg text-black mb-6" data-translate="about_desc2">Nuestra misión es ofrecer coberturas adaptables a tus necesidades, con un servicio de atención al cliente excepcional y los mejores precios del mercado.</p>
+            <p class="text-lg text-black mb-8" data-translate="about_desc3">Confía en nosotros para estar protegido en cualquier situación. Conduce con la seguridad de tener el mejor respaldo.</p>
+            <div class="grid grid-cols-3 gap-4 text-center">
+              <div>
+                <p class="text-3xl font-bold text-blue-900">15+</p>
+                <p class="text-black" data-translate="about_stat1">Años de experiencia</p>
+              </div>
+              <div>
+                <p class="text-3xl font-bold text-blue-900">50K+</p>
+                <p class="text-black" data-translate="about_stat2">Clientes satisfechos</p>
+              </div>
+              <div>
+                <p class="text-3xl font-bold text-blue-900">24/7</p>
+                <p class="text-black" data-translate="about_stat3">Asistencia disponible</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pie de página -->
+    <Footer />
+  </div>
+
+  <script>
+    // Sistema de traducción
+    const translations = {
+      es: {
+        nav_inicio: "Inicio",
+        nav_servicios: "Servicios",
+        nav_cotizar: "Cotizar",
+        nav_nosotros: "Nosotros",
+        nav_contacto: "Contacto",
+        hero_title: "Protección completa para tu vehículo",
+        hero_subtitle: "Ofrecemos seguros de auto con cobertura integral, precios competitivos y atención personalizada para que conduzcas con tranquilidad.",
+        hero_cta_primary: "Cotiza ahora",
+        hero_cta_secondary: "Conoce más",
+        services_title: "Nuestras coberturas",
+        service1_title: "Cobertura completa",
+        service1_desc: "Protección integral contra daños, robo, accidentes y responsabilidad civil. Conduce sin preocupaciones.",
+        service2_title: "Asistencia 24/7",
+        service2_desc: "Servicio de auxilio vial las 24 horas del día, los 365 días del año. Estamos siempre para ti.",
+        service3_title: "Reparación rápida",
+        service3_desc: "Red de talleres certificados para reparaciones rápidas y de calidad. Tu vehículo listo en tiempo récord.",
+        quote_title: "Obtén tu cotización",
+        form_name: "Nombre completo",
+        form_email: "Correo electrónico",
+        form_phone: "Teléfono",
+        form_vehicle: "Tipo de vehículo",
+        form_select_vehicle: "Selecciona una opción",
+        form_sedan: "Sedán",
+        form_suv: "SUV",
+        form_pickup: "Pickup",
+        form_motorcycle: "Motocicleta",
+        form_coverage: "Tipo de cobertura",
+        form_basic: "Básica",
+        form_medium: "Intermedia",
+        form_premium: "Premium",
+        form_submit: "Obtener cotización",
+        quote_result_title: "Tu cotización",
+        quote_result_desc: "Gracias por tu interés. Uno de nuestros agentes te contactará pronto con una cotización personalizada.",
+        quote_result_period: "mensuales",
+        testimonials_title: "Lo que dicen nuestros clientes",
+        testimonial1: "Excelente servicio. Tuve un accidente y me atendieron de inmediato. El proceso de reclamación fue muy sencillo y rápido.",
+        testimonial2: "Las mejores tarifas del mercado. Comparé con varias aseguradoras y AutoSeguro me ofreció la mejor cobertura al precio más accesible.",
+        testimonial3: "El equipo de atención al cliente es excepcional. Siempre están dispuestos a ayudar y resolver cualquier duda de manera amable y profesional.",
+        about_title: "Sobre nosotros",
+        about_desc1: "Con más de 15 años de experiencia en el sector asegurador, en AutoSeguro nos dedicamos a proteger lo más valioso para ti: tu vehículo y tu tranquilidad.",
+        about_desc2: "Nuestra misión es ofrecer coberturas adaptables a tus necesidades, con un servicio de atención al cliente excepcional y los mejores precios del mercado.",
+        about_desc3: "Confía en nosotros para estar protegido en cualquier situación. Conduce con la seguridad de tener el mejor respaldo.",
+        about_stat1: "Años de experiencia",
+        about_stat2: "Clientes satisfechos",
+        about_stat3: "Asistencia disponible",
+        footer_about: "Protección integral para tu vehículo con el mejor servicio del mercado.",
+        footer_links_title: "Enlaces rápidos",
+        footer_home: "Inicio",
+        footer_services: "Servicios",
+        footer_quote: "Cotizar",
+        footer_about: "Nosotros",
+        footer_legal_title: "Legal",
+        footer_privacy: "Política de privacidad",
+        footer_terms: "Términos y condiciones",
+        footer_cookies: "Política de cookies",
+        footer_contact_title: "Contacto",
+        footer_phone: "+1 (555) 123-4567",
+        footer_email: "info@autoseguro.com",
+        footer_address: "123 Calle Principal, Ciudad, País",
+        footer_copyright: "C. Eduardo Carrasco Dev. Todos los derechos reservados."
+      },
+      en: {
+        nav_inicio: "Home",
+        nav_servicios: "Services",
+        nav_cotizar: "Quote",
+        nav_nosotros: "About Us",
+        nav_contacto: "Contact",
+        hero_title: "Complete protection for your vehicle",
+        hero_subtitle: "We offer car insurance with comprehensive coverage, competitive prices and personalized service so you can drive with peace of mind.",
+        hero_cta_primary: "Get a quote now",
+        hero_cta_secondary: "Learn more",
+        services_title: "Our coverages",
+        service1_title: "Full coverage",
+        service1_desc: "Comprehensive protection against damage, theft, accidents and civil liability. Drive without worries.",
+        service2_title: "24/7 assistance",
+        service2_desc: "Roadside assistance service 24 hours a day, 365 days a year. We are always there for you.",
+        service3_title: "Fast repair",
+        service3_desc: "Network of certified workshops for fast and quality repairs. Your vehicle ready in record time.",
+        quote_title: "Get your quote",
+        form_name: "Full name",
+        form_email: "Email address",
+        form_phone: "Phone",
+        form_vehicle: "Vehicle type",
+        form_select_vehicle: "Select an option",
+        form_sedan: "Sedan",
+        form_suv: "SUV",
+        form_pickup: "Pickup",
+        form_motorcycle: "Motorcycle",
+        form_coverage: "Coverage type",
+        form_basic: "Basic",
+        form_medium: "Medium",
+        form_premium: "Premium",
+        form_submit: "Get quote",
+        quote_result_title: "Your quote",
+        quote_result_desc: "Thank you for your interest. One of our agents will contact you soon with a personalized quote.",
+        quote_result_period: "monthly",
+        testimonials_title: "What our clients say",
+        testimonial1: "Excellent service. I had an accident and they assisted me immediately. The claim process was very simple and fast.",
+        testimonial2: "The best rates on the market. I compared with several insurance companies and AutoSeguro offered me the best coverage at the most affordable price.",
+        testimonial3: "The customer service team is exceptional. They are always willing to help and resolve any questions in a friendly and professional manner.",
+        about_title: "About us",
+        about_desc1: "With more than 15 years of experience in the insurance sector, at AutoSeguro we are dedicated to protecting what is most valuable to you: your vehicle and your peace of mind.",
+        about_desc2: "Our mission is to offer coverages adaptable to your needs, with exceptional customer service and the best prices in the market.",
+        about_desc3: "Trust us to be protected in any situation. Drive with the security of having the best backing.",
+        about_stat1: "Years of experience",
+        about_stat2: "Satisfied customers",
+        about_stat3: "Assistance available",
+        footer_about: "Comprehensive protection for your vehicle with the best service in the market.",
+        footer_links_title: "Quick links",
+        footer_home: "Home",
+        footer_services: "Services",
+        footer_quote: "Quote",
+        footer_about: "About Us",
+        footer_legal_title: "Legal",
+        footer_privacy: "Privacy Policy",
+        footer_terms: "Terms and Conditions",
+        footer_cookies: "Cookie Policy",
+        footer_contact_title: "Contact",
+        footer_phone: "+1 (555) 123-4567",
+        footer_email: "info@autoseguro.com",
+        footer_address: "123 Main Street, City, Country",
+        footer_copyright: "C. Eduardo Carrasco Dev. All rights reserved."
+      }
+    };
+
+    let currentLang = 'es';
+
+    // Función para cambiar el idioma
+    function changeLanguage(lang) {
+      currentLang = lang;
+      document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[lang][key]) {
+          element.textContent = translations[lang][key];
+        }
+      });
+      
+      // Actualizar el botón de idioma
+     document.getElementById('lang-toggle').textContent = lang === 'es' ? 'EN' : 'ES';
+    }
+
+    // Event listener para el botón de cambio de idioma
+    document.getElementById('lang-toggle').addEventListener('click', function() {
+      changeLanguage(currentLang === 'es' ? 'en' : 'es');
+    });
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const LANG_KEY = 'userLanguagePreference';
+        const defaultLang = 'ES';
+        
+        // La clave es la persistencia
+        const savedLang = localStorage.getItem(LANG_KEY);
+        const currentLanguage = savedLang || defaultLang;
+
+   
+
+    
+         if (currentLanguage === 'EN') {
+             changeLanguage('en');
+        } else {
+             changeLanguage('es'); 
+         }
+    });
+
+
+    // Event listener para el menú móvil
+    document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Event listener para el formulario de cotización
+    document.getElementById('quote-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Simulación de envío de formulario
+      const quoteResult = document.getElementById('quote-result');
+      quoteResult.classList.remove('hidden');
+      
+      // Hacer scroll al resultado
+      quoteResult.scrollIntoView({ behavior: 'smooth' });
+      
+      // Simulación de cálculo de cotización
+      const coverage = document.querySelector('input[name="coverage"]:checked').value;
+      let price;
+      
+      switch(coverage) {
+        case 'basic':
+          price = Math.floor(Math.random() * 50) + 30;
+          break;
+        case 'medium':
+          price = Math.floor(Math.random() * 50) + 80;
+          break;
+        case 'premium':
+          price = Math.floor(Math.random() * 50) + 130;
+          break;
+      }
+      
+      const priceElement = quoteResult.querySelector('.text-2xl');
+      priceElement.innerHTML = `$${price} <span class="text-sm font-normal text-black" data-translate="quote_result_period">${translations[currentLang].quote_result_period}</span>`;
+    });
+
+    // Smooth scrolling para enlaces de anclaje
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+          
+          // Cerrar menú móvil si está abierto
+          const mobileMenu = document.getElementById('mobile-menu');
+          if (!mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+          }
+        }
+      });
+    });
+  </script>
 </Layout>

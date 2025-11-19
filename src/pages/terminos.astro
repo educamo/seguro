@@ -1,0 +1,419 @@
+---
+// src/pages/terminos.astro
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Términos y Condiciones | AutoSeguro">
+  <div id="app" class="min-h-screen bg-white">
+    <!-- Barra de navegación -->
+    <Header />
+
+    <!-- Contenido principal -->
+    <main class="container mx-auto px-6 py-12 md:py-20">
+      <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl md:text-4xl font-bold text-blue-900 mb-8" data-translate="terms_title">Términos y Condiciones</h1>
+        
+        <div class="prose prose-lg max-w-none">
+          <p class="text-black mb-6" data-translate="terms_intro">
+            Bienvenido a AutoSeguro. Estos términos y condiciones rigen el uso de nuestros servicios de seguros y la relación contractual entre AutoSeguro y nuestros clientes. Al utilizar nuestros servicios, aceptas estos términos en su totalidad.
+          </p>
+          
+          <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4" data-translate="terms_acceptance_title">1. Aceptación de los Términos</h2>
+          <p class="text-black mb-6" data-translate="terms_acceptance_text">
+            Al acceder a nuestro sitio web, solicitar una cotización o contratar un seguro con AutoSeguro, aceptas estar sujeto a estos términos y condiciones. Si no estás de acuerdo con alguno de estos términos, no debes utilizar nuestros servicios.
+          </p>
+          
+          <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4" data-translate="terms_definitions_title">2. Definiciones</h2>
+          <div class="bg-gray-50 p-6 rounded-lg mb-6">
+            <ul class="space-y-2 text-black">
+              <li><strong data-translate="terms_def_policy">Póliza:</strong> <span data-translate="terms_def_policy_desc">El contrato de seguro entre AutoSeguro y el asegurado.</span></li>
+              <li><strong data-translate="terms_def_premium">Prima:</strong> <span data-translate="terms_def_premium_desc">El pago periódico realizado por el asegurado para mantener la cobertura.</span></li>
+              <li><strong data-translate="terms_def_claim">Siniestro:</strong> <span data-translate="terms_def_claim_desc">Cualquier evento que pueda dar lugar a una reclamación bajo la póliza.</span></li>
+              <li><strong data-translate="terms_def_deductible">Deducible:</strong> <span data-translate="terms_def_deductible_desc">La cantidad que el asegurado debe pagar de su bolsillo antes de que la cobertura del seguro se aplique.</span></li>
+            </ul>
+          </div>
+          
+          <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4" data-translate="terms_services_title">3. Servicios de Seguro</h2>
+          <p class="text-black mb-4" data-translate="terms_services_text">
+            AutoSeguro ofrece los siguientes tipos de cobertura:
+          </p>
+          <ul class="list-disc pl-6 text-black mb-6 space-y-2">
+            <li data-translate="terms_service_basic">Cobertura básica: Responsabilidad civil y daños a terceros</li>
+            <li data-translate="terms_service_medium">Cobertura intermedia: Incluye robo y daños parciales</li>
+            <li data-translate="terms_service_premium">Cobertura premium: Protección completa contra todo riesgo</li>
+            <li data-translate="terms_service_assistance">Asistencia vial 24/7</li>
+          </ul>
+          
+          <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4" data-translate="terms_obligations_title">4. Obligaciones del Asegurado</h2>
+          <p class="text-black mb-4" data-translate="terms_obligations_text">
+            Como cliente de AutoSeguro, te comprometes a:
+          </p>
+          <ul class="list-disc pl-6 text-black mb-6 space-y-2">
+            <li data-translate="terms_obligation_info">Proporcionar información veraz y completa sobre ti y tu vehículo</li>
+            <li data-translate="terms_obligation_payment">Pagar las primas en las fechas establecidas</li>
+            <li data-translate="terms_obligation_maintenance">Mantener tu vehículo en buen estado mecánico</li>
+            <li data-translate="terms_obligation_report">Reportar cualquier siniestro dentro del plazo establecido (máximo 72 horas)</li>
+            <li data-translate="terms_obligation_cooperation">Cooperar plenamente en el proceso de reclamación</li>
+          </ul>
+          
+          <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4" data-translate="terms_payment_title">5. Términos de Pago</h2>
+          <p class="text-black mb-4" data-translate="terms_payment_text">
+            Las primas del seguro pueden pagarse:
+          </p>
+          <ul class="list-disc pl-6 text-black mb-6 space-y-2">
+            <li data-translate="terms_payment_monthly">Mensualmente</li>
+            <li data-translate="terms_payment_quarterly">Trimestralmente</li>
+            <li data-translate="terms_payment_semiannual">Semestralmente</li>
+            <li data-translate="terms_payment_annual">Anualmente (con descuento del 10%)</li>
+          </ul>
+          <p class="text-black mb-6" data-translate="terms_payment_late">
+            Los pagos realizados después de la fecha de vencimiento estarán sujetos a un cargo por mora del 2% sobre el monto adeudado.
+          </p>
+          
+          <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4" data-translate="terms_claims_title">6. Proceso de Reclamación</h2>
+          <p class="text-black mb-4" data-translate="terms_claims_text">
+            Para presentar una reclamación, debes seguir estos pasos:
+          </p>
+          <ol class="list-decimal pl-6 text-black mb-6 space-y-2">
+            <li data-translate="terms_claims_step1">Notificar el siniestro dentro de las 72 horas siguientes al evento</li>
+            <li data-translate="terms_claims_step2">Proporcionar toda la documentación requerida (fotos, informes, testigos)</li>
+            <li data-translate="terms_claims_step3">Completar el formulario de reclamación oficial</li>
+            <li data-translate="terms_claims_step4">Cooperar con el ajustador asignado</li>
+            <li data-translate="terms_claims_step5">Recibir la decisión sobre tu reclamación dentro de 15 días hábiles</li>
+          </ol>
+          
+          <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4" data-translate="terms_exclusions_title">7. Exclusiones de Cobertura</h2>
+          <p class="text-black mb-4" data-translate="terms_exclusions_text">
+            Nuestra póliza no cubre los siguientes eventos:
+          </p>
+          <ul class="list-disc pl-6 text-black mb-6 space-y-2">
+            <li data-translate="terms_exclusion_dui">Daños ocurridos bajo la influencia de alcohol o drogas</li>
+            <li data-translate="terms_exclusion_racing">Participación en carreras o competiciones</li>
+            <li data-translate="terms_exclusion_war">Daños causados por actos de guerra o terrorismo</li>
+            <li data-translate="terms_exclusion_nuclear">Daños nucleares o radiactivos</li>
+            <li data-translate="terms_exclusion_maintenance">Daños por falta de mantenimiento adecuado</li>
+            <li data-translate="terms_exclusion_unauthorized">Uso del vehículo por personas no autorizadas</li>
+          </ul>
+          
+          <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4" data-translate="terms_cancellation_title">8. Cancelación de la Póliza</h2>
+          <p class="text-black mb-4" data-translate="terms_cancellation_text">
+            Tanto el asegurado como AutoSeguro pueden cancelar la póliza bajo las siguientes condiciones:
+          </p>
+          <ul class="list-disc pl-6 text-black mb-6 space-y-2">
+            <li data-translate="terms_cancellation_client">El cliente puede cancelar en cualquier momento con 30 días de aviso previo</li>
+            <li data-translate="terms_cancellation_company">AutoSeguro puede cancelar por no pago de primas</li>
+            <li data-translate="terms_cancellation_fraud">Por fraude o representación falsa</li>
+            <li data-translate="terms_cancellation_risk">Por aumento significativo del riesgo asegurado</li>
+          </ul>
+          <p class="text-black mb-6" data-translate="terms_cancellation_refund">
+            En caso de cancelación, se reembolsará la prima proporcional no devengada, menos una tarifa administrativa del 10%.
+          </p>
+          
+          <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4" data-translate="terms_liability_title">9. Limitación de Responsabilidad</h2>
+          <p class="text-black mb-6" data-translate="terms_liability_text">
+            La responsabilidad máxima de AutoSeguro bajo cualquier póliza se limita al monto de la cobertura contratada. No seremos responsables por daños consecuentes, indirectos o punitivos. En ningún caso nuestra responsabilidad total excederá el límite máximo de la póliza.
+          </p>
+          
+          <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4" data-translate="terms_disputes_title">10. Resolución de Disputas</h2>
+          <p class="text-black mb-4" data-translate="terms_disputes_text">
+            Cualquier disputa que surja de estos términos o de tu relación con AutoSeguro se resolverá de la siguiente manera:
+          </p>
+          <ol class="list-decimal pl-6 text-black mb-6 space-y-2">
+            <li data-translate="terms_disputes_negotiation">Negociación directa entre las partes</li>
+            <li data-translate="terms_disputes_mediation">Mediación con un tercero neutral</li>
+            <li data-translate="terms_disputes_arbitration">Arbitraje vinculante</li>
+            <li data-translate="terms_disputes_court">Litigio en los tribunales competentes</li>
+          </ol>
+          
+          <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4" data-translate="terms_intellectual_title">11. Propiedad Intelectual</h2>
+          <p class="text-black mb-6" data-translate="terms_intellectual_text">
+            Todo el contenido de este sitio web, incluyendo但不限于 textos, gráficos, logotipos, imágenes y software, es propiedad de AutoSeguro y está protegido por las leyes de propiedad intelectual. No puedes reproducir, distribuir o crear trabajos derivados sin nuestro consentimiento explícito por escrito.
+          </p>
+          
+          <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4" data-translate="terms_modifications_title">12. Modificaciones de los Términos</h2>
+          <p class="text-black mb-6" data-translate="terms_modifications_text">
+            AutoSeguro se reserva el derecho de modificar estos términos y condiciones en cualquier momento. Las modificaciones entrarán en vigor inmediatamente después de su publicación en nuestro sitio web. Te notificaremos cualquier cambio significativo mediante correo electrónico o notificación en tu cuenta.
+          </p>
+          
+          <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4" data-translate="terms_governing_title">13. Ley Aplicable</h2>
+          <p class="text-black mb-6" data-translate="terms_governing_text">
+            Estos términos y condiciones se regirán e interpretarán de acuerdo con las leyes del país donde se emitió la póliza. Cualquier disputa legal se resolverá en los tribunales competentes de dicha jurisdicción.
+          </p>
+          
+          <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4" data-translate="terms_contact_title">14. Contacto</h2>
+          <p class="text-black mb-4" data-translate="terms_contact_text">
+            Si tienes alguna pregunta sobre estos términos y condiciones, puedes contactarnos:
+          </p>
+          <div class="bg-gray-50 p-6 rounded-lg mb-6">
+            <p class="text-black mb-2"><strong data-translate="terms_contact_email">Correo electrónico:</strong> legal@autoseguro.com</p>
+            <p class="text-black mb-2"><strong data-translate="terms_contact_phone">Teléfono:</strong> +1 (555) 123-4567</p>
+            <p class="text-black"><strong data-translate="terms_contact_address">Dirección:</strong> 123 Calle Principal, Ciudad, País</p>
+          </div>
+          
+          <p class="text-black mt-8 text-sm" data-translate="terms_last_updated">
+            Última actualización: 15 de noviembre de 2023
+          </p>
+        </div>
+        
+        <div class="mt-12 text-center">
+          <a href="/" class="inline-flex items-center px-6 py-3 bg-orange-500 text-white font-semibold rounded-md hover:bg-orange-600 transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            <span data-translate="terms_back_home">Volver al inicio</span>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- Pie de página -->
+    <Footer />
+  </div>
+
+  <script>
+    // Sistema de traducción
+    const translations = {
+      es: {
+        nav_inicio: "Inicio",
+        nav_servicios: "Servicios",
+        nav_cotizar: "Cotizar",
+        nav_nosotros: "Nosotros",
+        nav_contacto: "Contacto",
+        terms_title: "Términos y Condiciones",
+        terms_intro: "Bienvenido a AutoSeguro. Estos términos y condiciones rigen el uso de nuestros servicios de seguros y la relación contractual entre AutoSeguro y nuestros clientes. Al utilizar nuestros servicios, aceptas estos términos en su totalidad.",
+        terms_acceptance_title: "1. Aceptación de los Términos",
+        terms_acceptance_text: "Al acceder a nuestro sitio web, solicitar una cotización o contratar un seguro con AutoSeguro, aceptas estar sujeto a estos términos y condiciones. Si no estás de acuerdo con alguno de estos términos, no debes utilizar nuestros servicios.",
+        terms_definitions_title: "2. Definiciones",
+        terms_def_policy: "Póliza:",
+        terms_def_policy_desc: "El contrato de seguro entre AutoSeguro y el asegurado.",
+        terms_def_premium: "Prima:",
+        terms_def_premium_desc: "El pago periódico realizado por el asegurado para mantener la cobertura.",
+        terms_def_claim: "Siniestro:",
+        terms_def_claim_desc: "Cualquier evento que pueda dar lugar a una reclamación bajo la póliza.",
+        terms_def_deductible: "Deducible:",
+        terms_def_deductible_desc: "La cantidad que el asegurado debe pagar de su bolsillo antes de que la cobertura del seguro se aplique.",
+        terms_services_title: "3. Servicios de Seguro",
+        terms_services_text: "AutoSeguro ofrece los siguientes tipos de cobertura:",
+        terms_service_basic: "Cobertura básica: Responsabilidad civil y daños a terceros",
+        terms_service_medium: "Cobertura intermedia: Incluye robo y daños parciales",
+        terms_service_premium: "Cobertura premium: Protección completa contra todo riesgo",
+        terms_service_assistance: "Asistencia vial 24/7",
+        terms_obligations_title: "4. Obligaciones del Asegurado",
+        terms_obligations_text: "Como cliente de AutoSeguro, te comprometes a:",
+        terms_obligation_info: "Proporcionar información veraz y completa sobre ti y tu vehículo",
+        terms_obligation_payment: "Pagar las primas en las fechas establecidas",
+        terms_obligation_maintenance: "Mantener tu vehículo en buen estado mecánico",
+        terms_obligation_report: "Reportar cualquier siniestro dentro del plazo establecido (máximo 72 horas)",
+        terms_obligation_cooperation: "Cooperar plenamente en el proceso de reclamación",
+        terms_payment_title: "5. Términos de Pago",
+        terms_payment_text: "Las primas del seguro pueden pagarse:",
+        terms_payment_monthly: "Mensualmente",
+        terms_payment_quarterly: "Trimestralmente",
+        terms_payment_semiannual: "Semestralmente",
+        terms_payment_annual: "Anualmente (con descuento del 10%)",
+        terms_payment_late: "Los pagos realizados después de la fecha de vencimiento estarán sujetos a un cargo por mora del 2% sobre el monto adeudado.",
+        terms_claims_title: "6. Proceso de Reclamación",
+        terms_claims_text: "Para presentar una reclamación, debes seguir estos pasos:",
+        terms_claims_step1: "Notificar el siniestro dentro de las 72 horas siguientes al evento",
+        terms_claims_step2: "Proporcionar toda la documentación requerida (fotos, informes, testigos)",
+        terms_claims_step3: "Completar el formulario de reclamación oficial",
+        terms_claims_step4: "Cooperar con el ajustador asignado",
+        terms_claims_step5: "Recibir la decisión sobre tu reclamación dentro de 15 días hábiles",
+        terms_exclusions_title: "7. Exclusiones de Cobertura",
+        terms_exclusions_text: "Nuestra póliza no cubre los siguientes eventos:",
+        terms_exclusion_dui: "Daños ocurridos bajo la influencia de alcohol o drogas",
+        terms_exclusion_racing: "Participación en carreras o competiciones",
+        terms_exclusion_war: "Daños causados por actos de guerra o terrorismo",
+        terms_exclusion_nuclear: "Daños nucleares o radiactivos",
+        terms_exclusion_maintenance: "Daños por falta de mantenimiento adecuado",
+        terms_exclusion_unauthorized: "Uso del vehículo por personas no autorizadas",
+        terms_cancellation_title: "8. Cancelación de la Póliza",
+        terms_cancellation_text: "Tanto el asegurado como AutoSeguro pueden cancelar la póliza bajo las siguientes condiciones:",
+        terms_cancellation_client: "El cliente puede cancelar en cualquier momento con 30 días de aviso previo",
+        terms_cancellation_company: "AutoSeguro puede cancelar por no pago de primas",
+        terms_cancellation_fraud: "Por fraude o representación falsa",
+        terms_cancellation_risk: "Por aumento significativo del riesgo asegurado",
+        terms_cancellation_refund: "En caso de cancelación, se reembolsará la prima proporcional no devengada, menos una tarifa administrativa del 10%.",
+        terms_liability_title: "9. Limitación de Responsabilidad",
+        terms_liability_text: "La responsabilidad máxima de AutoSeguro bajo cualquier póliza se limita al monto de la cobertura contratada. No seremos responsables por daños consecuentes, indirectos o punitivos. En ningún caso nuestra responsabilidad total excederá el límite máximo de la póliza.",
+        terms_disputes_title: "10. Resolución de Disputas",
+        terms_disputes_text: "Cualquier disputa que surja de estos términos o de tu relación con AutoSeguro se resolverá de la siguiente manera:",
+        terms_disputes_negotiation: "Negociación directa entre las partes",
+        terms_disputes_mediation: "Mediación con un tercero neutral",
+        terms_disputes_arbitration: "Arbitraje vinculante",
+        terms_disputes_court: "Litigio en los tribunales competentes",
+        terms_intellectual_title: "11. Propiedad Intelectual",
+        terms_intellectual_text: "Todo el contenido de este sitio web, incluyendo但不限于 textos, gráficos, logotipos, imágenes y software, es propiedad de AutoSeguro y está protegido por las leyes de propiedad intelectual. No puedes reproducir, distribuir o crear trabajos derivados sin nuestro consentimiento explícito por escrito.",
+        terms_modifications_title: "12. Modificaciones de los Términos",
+        terms_modifications_text: "AutoSeguro se reserva el derecho de modificar estos términos y condiciones en cualquier momento. Las modificaciones entrarán en vigor inmediatamente después de su publicación en nuestro sitio web. Te notificaremos cualquier cambio significativo mediante correo electrónico o notificación en tu cuenta.",
+        terms_governing_title: "13. Ley Aplicable",
+        terms_governing_text: "Estos términos y condiciones se regirán e interpretarán de acuerdo con las leyes del país donde se emitió la póliza. Cualquier disputa legal se resolverá en los tribunales competentes de dicha jurisdicción.",
+        terms_contact_title: "14. Contacto",
+        terms_contact_text: "Si tienes alguna pregunta sobre estos términos y condiciones, puedes contactarnos:",
+        terms_contact_email: "Correo electrónico:",
+        terms_contact_phone: "Teléfono:",
+        terms_contact_address: "Dirección:",
+        terms_last_updated: "Última actualización: 15 de noviembre de 2023",
+        terms_back_home: "Volver al inicio",
+        footer_about: "Protección integral para tu vehículo con el mejor servicio del mercado.",
+        footer_links_title: "Enlaces rápidos",
+        footer_home: "Inicio",
+        footer_services: "Servicios",
+        footer_quote: "Cotizar",
+        footer_about: "Nosotros",
+        footer_legal_title: "Legal",
+        footer_privacy: "Política de privacidad",
+        footer_terms: "Términos y condiciones",
+        footer_cookies: "Política de cookies",
+        footer_contact_title: "Contacto",
+        footer_phone: "+1 (555) 123-4567",
+        footer_email: "info@autoseguro.com",
+        footer_address: "123 Calle Principal, Ciudad, País",
+        footer_copyright: "C. Eduardo Carrasco Dev. Todos los derechos reservados."
+      },
+      en: {
+        nav_inicio: "Home",
+        nav_servicios: "Services",
+        nav_cotizar: "Quote",
+        nav_nosotros: "About Us",
+        nav_contacto: "Contact",
+        terms_title: "Terms and Conditions",
+        terms_intro: "Welcome to AutoSeguro. These terms and conditions govern the use of our insurance services and the contractual relationship between AutoSeguro and our clients. By using our services, you accept these terms in their entirety.",
+        terms_acceptance_title: "1. Acceptance of Terms",
+        terms_acceptance_text: "By accessing our website, requesting a quote, or purchasing insurance from AutoSeguro, you agree to be bound by these terms and conditions. If you do not agree to any of these terms, you should not use our services.",
+        terms_definitions_title: "2. Definitions",
+        terms_def_policy: "Policy:",
+        terms_def_policy_desc: "The insurance contract between AutoSeguro and the insured.",
+        terms_def_premium: "Premium:",
+        terms_def_premium_desc: "The periodic payment made by the insured to maintain coverage.",
+        terms_def_claim: "Claim:",
+        terms_def_claim_desc: "Any event that may give rise to a claim under the policy.",
+        terms_def_deductible: "Deductible:",
+        terms_def_deductible_desc: "The amount the insured must pay out of pocket before insurance coverage applies.",
+        terms_services_title: "3. Insurance Services",
+        terms_services_text: "AutoSeguro offers the following types of coverage:",
+        terms_service_basic: "Basic coverage: Civil liability and third-party damages",
+        terms_service_medium: "Intermediate coverage: Includes theft and partial damages",
+        terms_service_premium: "Premium coverage: Comprehensive all-risk protection",
+        terms_service_assistance: "24/7 roadside assistance",
+        terms_obligations_title: "4. Insured's Obligations",
+        terms_obligations_text: "As a client of AutoSeguro, you commit to:",
+        terms_obligation_info: "Provide truthful and complete information about yourself and your vehicle",
+        terms_obligation_payment: "Pay premiums on the established dates",
+        terms_obligation_maintenance: "Keep your vehicle in good mechanical condition",
+        terms_obligation_report: "Report any claim within the established period (maximum 72 hours)",
+        terms_obligation_cooperation: "Cooperate fully in the claims process",
+        terms_payment_title: "5. Payment Terms",
+        terms_payment_text: "Insurance premiums can be paid:",
+        terms_payment_monthly: "Monthly",
+        terms_payment_quarterly: "Quarterly",
+        terms_payment_semiannual: "Semi-annually",
+        terms_payment_annual: "Annually (with 10% discount)",
+        terms_payment_late: "Payments made after the due date will be subject to a 2% late fee on the outstanding amount.",
+        terms_claims_title: "6. Claims Process",
+        terms_claims_text: "To file a claim, you must follow these steps:",
+        terms_claims_step1: "Notify the claim within 72 hours following the event",
+        terms_claims_step2: "Provide all required documentation (photos, reports, witnesses)",
+        terms_claims_step3: "Complete the official claim form",
+        terms_claims_step4: "Cooperate with the assigned adjuster",
+        terms_claims_step5: "Receive the decision on your claim within 15 business days",
+        terms_exclusions_title: "7. Coverage Exclusions",
+        terms_exclusions_text: "Our policy does not cover the following events:",
+        terms_exclusion_dui: "Damages occurring under the influence of alcohol or drugs",
+        terms_exclusion_racing: "Participation in races or competitions",
+        terms_exclusion_war: "Damages caused by acts of war or terrorism",
+        terms_exclusion_nuclear: "Nuclear or radioactive damages",
+        terms_exclusion_maintenance: "Damages due to lack of proper maintenance",
+        terms_exclusion_unauthorized: "Use of the vehicle by unauthorized persons",
+        terms_cancellation_title: "8. Policy Cancellation",
+        terms_cancellation_text: "Both the insured and AutoSeguro can cancel the policy under the following conditions:",
+        terms_cancellation_client: "The client can cancel at any time with 30 days prior notice",
+        terms_cancellation_company: "AutoSeguro can cancel for non-payment of premiums",
+        terms_cancellation_fraud: "For fraud or misrepresentation",
+        terms_cancellation_risk: "For significant increase in insured risk",
+        terms_cancellation_refund: "In case of cancellation, the unearned proportional premium will be refunded, minus a 10% administrative fee.",
+        terms_liability_title: "9. Limitation of Liability",
+        terms_liability_text: "AutoSeguro's maximum liability under any policy is limited to the amount of contracted coverage. We will not be liable for consequential, indirect, or punitive damages. In no case will our total liability exceed the maximum policy limit.",
+        terms_disputes_title: "10. Dispute Resolution",
+        terms_disputes_text: "Any dispute arising from these terms or your relationship with AutoSeguro will be resolved as follows:",
+        terms_disputes_negotiation: "Direct negotiation between parties",
+        terms_disputes_mediation: "Mediation with a neutral third party",
+        terms_disputes_arbitration: "Binding arbitration",
+        terms_disputes_court: "Litigation in competent courts",
+        terms_intellectual_title: "11. Intellectual Property",
+        terms_intellectual_text: "All content on this website, including but not limited to texts, graphics, logos, images, and software, is the property of AutoSeguro and is protected by intellectual property laws. You may not reproduce, distribute, or create derivative works without our explicit written consent.",
+        terms_modifications_title: "12. Modifications to Terms",
+        terms_modifications_text: "AutoSeguro reserves the right to modify these terms and conditions at any time. Modifications will take effect immediately after publication on our website. We will notify you of any significant changes via email or notification in your account.",
+        terms_governing_title: "13. Governing Law",
+        terms_governing_text: "These terms and conditions shall be governed and interpreted in accordance with the laws of the country where the policy was issued. Any legal dispute will be resolved in the competent courts of that jurisdiction.",
+        terms_contact_title: "14. Contact",
+        terms_contact_text: "If you have any questions about these terms and conditions, you can contact us:",
+        terms_contact_email: "Email:",
+        terms_contact_phone: "Phone:",
+        terms_contact_address: "Address:",
+        terms_last_updated: "Last updated: November 15, 2023",
+        terms_back_home: "Back to home",
+        footer_about: "Comprehensive protection for your vehicle with the best service in the market.",
+        footer_links_title: "Quick links",
+        footer_home: "Home",
+        footer_services: "Services",
+        footer_quote: "Quote",
+        footer_about: "About Us",
+        footer_legal_title: "Legal",
+        footer_privacy: "Privacy Policy",
+        footer_terms: "Terms and Conditions",
+        footer_cookies: "Cookie Policy",
+        footer_contact_title: "Contact",
+        footer_phone: "+1 (555) 123-4567",
+        footer_email: "info@autoseguro.com",
+        footer_address: "123 Main Street, City, Country",
+        footer_copyright: "C. Eduardo Carrasco Dev. All rights reserved."
+      }
+    };
+
+    let currentLang = 'es';
+
+    // Función para cambiar el idioma
+    function changeLanguage(lang) {
+      currentLang = lang;
+      document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[lang][key]) {
+          element.textContent = translations[lang][key];
+        }
+      });
+      
+      // Actualizar el botón de idioma
+      document.getElementById('lang-toggle').textContent = lang === 'es' ? 'EN' : 'ES';
+    }
+
+    // Event listener para el botón de cambio de idioma
+    document.getElementById('lang-toggle').addEventListener('click', function() {
+      changeLanguage(currentLang === 'es' ? 'en' : 'es');
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const LANG_KEY = 'userLanguagePreference';
+        const defaultLang = 'ES';
+        
+        // La clave es la persistencia
+        const savedLang = localStorage.getItem(LANG_KEY);
+        const currentLanguage = savedLang || defaultLang;
+
+    
+         if (currentLanguage === 'EN') {
+             changeLanguage('en');
+        } else {
+             changeLanguage('es'); 
+         }
+    });
+
+    // Event listener para el menú móvil
+    document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</Layout>
